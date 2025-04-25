@@ -32,7 +32,19 @@ mongodump -d meuBanco -o meuBanco
 
 # 4 - importar arquivos do mongodump
 
+mongorestore -d meuBancoDois meuBanco/meuBanco
 
+# 4.1 - utilizando o mongostat
+
+mongostat (nova instancia do terminal)
+
+# 4.2 - dropando varios bancos (Rodar no shell do mongo)
+
+Mongo().getDBNames().forEach(function(db) {
+	if(['admin', 'local', 'config'].indexOf(db) < 0) {
+		Mongo().getDB(db).dropDatabase();
+	}
+});
 
 # 5 - tarefa 1
 
