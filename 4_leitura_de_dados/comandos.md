@@ -50,7 +50,8 @@ db.books.find({ status: "PUBLISH", $or: [{pageCount: 500}, {authors: "Robi Sen"}
 
 # 9 - count
 
-db.books.find({ pageCount: {$gt: 600 }}).count()
+db.books.find({ pageCount: {$gt: 600 }}).count() -> será descontinuado
+db.books.countDocuments({ pageCount: {$gt: 600 }}) -> nova forma de contar
 
 # TAREFA 03
 
