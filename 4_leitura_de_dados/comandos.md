@@ -26,7 +26,7 @@ db.books.find({categories: {$in: ["Java", "Internet"]}}).pretty()
 
 db.books.find({ pageCount: 592, _id: 63 }).pretty()
 
-# 6 - maior que
+# 6 - maior que - $gt significa greater than
 
 db.books.find({ pageCount: { $gt: 450 }}).pretty()
 
@@ -35,7 +35,7 @@ db.books.find({ pageCount: { $gt: 450 }}).pretty()
 db.books.find({ pageCount: {$gt: 800} }).pretty()
 db.books.find({ _id: {$gt: 122} }).pretty()
 
-# 7 - menor que
+# 7 - menor que - $lt significa less than
 
 db.books.find({ pageCount: { $lt: 120 }}).pretty()
 
