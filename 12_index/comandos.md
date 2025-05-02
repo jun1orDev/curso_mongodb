@@ -12,7 +12,7 @@ db.inspections.find({certificate_number: 3030353})
 
 db.inspections.createIndex({ "address.city": 1 })
 
-# 4 - chegando indexes das collections
+# 4 - chacando indexes das collections
 
 db.inspections.getIndexes()
 
